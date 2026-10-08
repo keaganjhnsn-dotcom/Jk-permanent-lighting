@@ -3,3 +3,19 @@
 @media(max-width:620px){.topbar{padding:0 5vw}.topbar>span{display:none}.topbar-right span{display:none}.nav{padding:0 5vw;height:72px}.brand{min-width:auto}.brand-copy{display:none}.nav-cta{font-size:8px;padding:10px 11px;margin-left:auto}.menu-toggle{order:2;margin-left:0}.nav-cta{order:1}.menu-toggle{order:2}.hero{min-height:calc(100svh - 104px)}.hero-media{background:radial-gradient(ellipse at 75% 62%,rgba(224,200,142,.1),transparent 30%),linear-gradient(180deg,#0a0d0e,#050607)}.hero-house{width:120vw;right:-36vw;bottom:7vh;opacity:.65}.hero-overlay{background:linear-gradient(90deg,rgba(4,6,7,.98) 0%,rgba(4,6,7,.8) 58%,rgba(4,6,7,.5)),linear-gradient(0deg,rgba(4,6,7,.88),transparent 60%)}.hero-content{margin-left:7vw;width:86%;padding:75px 0 110px}.hero-tag{font-size:7px}.hero h1{font-size:50px}.hero-copy{font-size:14px;line-height:1.65}.hero-actions{flex-direction:column}.hero-actions .button{width:100%}.hero-proof{gap:10px;flex-direction:column}.hero-bottom{display:none}.trust-strip{grid-template-columns:1fr 1fr}.trust-strip div{padding:22px 6vw}.trust-strip div:nth-child(2){border-right:0}.trust-strip div:nth-child(n+3){border-top:1px solid var(--line)}.section-pad{padding:85px 7vw}.feature-content{padding:80px 7vw}.feature-media{padding:7vw;min-height:420px}.occasion-grid,.process-grid,.gallery-grid,.form-row{grid-template-columns:1fr}.occasion-grid article,.occasion-grid article:not(:first-child),.process-grid article,.process-grid article:not(:first-child){padding-left:0;padding-right:0;border-right:0;border-top:1px solid var(--line)}.occasion-grid article:first-child,.process-grid article:first-child{border-top:0}.gallery-card.large,.gallery-card{height:350px;grid-column:auto}.gallery-head{display:block}.gallery-head>p{margin-top:25px}.deposit-note{padding:55px 7vw}.deposit-note h2{font-size:31px}.estimate h2{font-size:53px}.estimate-form{padding:22px}.form-heading{display:block}.form-heading small{display:block;margin-top:7px}.footer-main{display:block}.footer-contact{align-items:flex-start;margin-top:35px}.footer-bottom{flex-direction:column;gap:10px}.hero-proof span{font-size:7px}}
 
 .intro-grid,.feature-content,.occasion-grid article,.gallery-card,.process-grid article,.estimate-form,.faq-list{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.is-visible{opacity:1;transform:none}.occasion-grid article:nth-child(2),.gallery-card:nth-child(2),.process-grid article:nth-child(2){transition-delay:.08s}.occasion-grid article:nth-child(3),.gallery-card:nth-child(3),.process-grid article:nth-child(3){transition-delay:.16s}.occasion-grid article:nth-child(4),.process-grid article:nth-child(4){transition-delay:.24s}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.intro-grid,.feature-content,.occasion-grid article,.gallery-card,.process-grid article,.estimate-form,.faq-list{opacity:1;transform:none;transition:none}}
+/* FIX: Make website photos display correctly */
+.media-slot > img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Keep gallery photos visible */
+.gallery-card {
+  opacity: 1;
+  transform: none;
+}
