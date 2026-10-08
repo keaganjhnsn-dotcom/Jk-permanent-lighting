@@ -19,3 +19,14 @@
   opacity: 1;
   transform: none;
 }
+/* Show the complete gallery photos without cropping */
+.gallery-card > img {
+  object-fit: contain;
+  background: #07090a;
+}
+
+/* Keep the feature photo fitted to its section */
+.feature-media > img {
+  object-fit: contain;
+  background: #07090a;
+}
